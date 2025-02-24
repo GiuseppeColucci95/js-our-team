@@ -62,21 +62,22 @@ formEl.addEventListener('submit', (e) => {
   e.preventDefault();
 
   //get all the node elements
-  const nameEl = document.getElementById('name').value;
-  const roleEl = document.getElementById('role').value;
-  const emailEl = document.getElementById('email').value;
-  let imgEl = document.getElementById('image').value;
+  const name = document.getElementById('name').value;
+  const role = document.getElementById('role').value;
+  const email = document.getElementById('email').value;
+  let img = document.getElementById('image').value;
 
-  if (imgEl === '') {
-    imgEl = "./assets/img/male1.png";
+  //if img field is empty set a default
+  if (img === '') {
+    img = "./assets/img/male1.png";
   }
 
-  //create an object with the new data
+  //create an object with the new data with ES6 style
   const member = {
-    name: nameEl,
-    role: roleEl,
-    email: emailEl,
-    img: imgEl
+    name,
+    role,
+    email,
+    img
   }
 
   //ask and get markup to add it in the page
