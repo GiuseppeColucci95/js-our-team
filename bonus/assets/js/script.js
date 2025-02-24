@@ -73,12 +73,7 @@ formEl.addEventListener('submit', (e) => {
   }
 
   //create an object with the new data with ES6 style
-  const member = {
-    name,
-    role,
-    email,
-    img
-  }
+  const member = createObject(name, role, email, img);
 
   //ask and get markup to add it in the page
   const markup = getMarkup(member);
@@ -120,4 +115,24 @@ function getMarkup(object) {
       </div>`;
 
   return markup;
+}
+
+/**
+ * Function that returns an object starting from given values
+ * @param {string} name 
+ * @param {string} role 
+ * @param {string} email 
+ * @param {string} img 
+ * @returns {object}
+ */
+function createObject(name, role, email, img) {
+
+  const member = {
+    name,
+    role,
+    email,
+    img
+  }
+
+  return member;
 }
