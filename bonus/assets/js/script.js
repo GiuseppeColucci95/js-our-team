@@ -1,6 +1,8 @@
 //select the dom elements
 const sectionEl = document.querySelector('#cards .row');
 console.log(sectionEl);
+const formEl = document.getElementById('add_member');
+console.log(formEl);
 
 const teamMembers = [
   {
@@ -53,6 +55,39 @@ for (let i = 0; i < teamMembers.length; i++) {
   sectionEl.innerHTML += markup;
 }
 
+
+formEl.addEventListener('submit', (e) => {
+
+  //prevent refresh of the page
+  e.preventDefault();
+
+  //get all the node elements
+  const nameEl = document.getElementById('name').value;
+  const roleEl = document.getElementById('role').value;
+  const emailEl = document.getElementById('email').value;
+  let imgEl = document.getElementById('image').value;
+
+  if (imgEl === '') {
+    imgEl = "./assets/img/male1.png";
+  }
+
+  //create an object with the new data
+  const member = {
+    name: nameEl,
+    role: roleEl,
+    email: emailEl,
+    img: imgEl
+  }
+
+  //ask and get markup to add it in the page
+  const markup = getMarkup(member);
+
+  //add markup to the html
+  sectionEl.innerHTML += markup;
+
+  //clear values in the form
+  formEl.reset();
+});
 
 
 
