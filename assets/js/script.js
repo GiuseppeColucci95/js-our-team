@@ -66,22 +66,22 @@ for (let i = 0; i < teamMembers.length; i++) {
 function getMarkup(object) {
 
   const markup = `      
-    <div class="col-4">
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-4">
-            <img src="${object.img}" class="img-fluid rounded-start" alt="Card title">
-          </div>
-          <div class="col-8 d-flex align-items-center">
-            <div class="card-body">
-              <h5>${object.name}</h5>
-              <p>${object.role}</p>
-              <p>${object.email}</p>
+      <div class="col-4">
+        <div class="card mb-3">
+          <div class="row g-0 bg-black">
+            <div class="col-4">
+              <img src="${object.img}" class="img-fluid" alt="Card title">
+            </div>
+            <div class="col-8 px-4 d-flex align-items-center">
+              <div>
+                <h5 class="text-white fw-semibold fs-3">${object.name.toUpperCase()}</h5>
+                <p class="text-white fs-5 my-3">${object.role}</p>
+                <p class="text-info fs-5 my-0">${object.email}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>`;
+      </div>`;
 
   return markup;
 }

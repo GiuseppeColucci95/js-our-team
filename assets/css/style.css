@@ -1,0 +1,12 @@
+:root {
+  --h1-color: #e53170;
+}
+
+body {
+  font-family: "Fredoka", serif;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--h1-color);
+}
