@@ -10,3 +10,10 @@ h1 {
   font-size: 4rem;
   color: var(--h1-color);
 }
+
+#add {
+
+  .card {
+    border-color: var(--h1-color);
+  }
+}
