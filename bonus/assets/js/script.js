@@ -1,5 +1,5 @@
 //select the dom elements
-const sectionEl = document.getElementById('cards');
+const sectionEl = document.querySelector('#cards .row');
 console.log(sectionEl);
 
 const teamMembers = [
@@ -67,7 +67,7 @@ function getMarkup(object) {
 
   const markup = `      
       <div class="col-4">
-        <div class="card mb-3">
+        <div class="card">
           <div class="row g-0 bg-black">
             <div class="col-4">
               <img src="${object.img}" class="img-fluid" alt="Card title">
